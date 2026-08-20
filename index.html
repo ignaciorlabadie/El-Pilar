@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pilar - Mercería</title>
+    <link rel="icon" type="image/jpeg" href="img/favicon-el-pilar.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#inicio" class="header__logo">
+                <img src="img/logo-el-pilar.jpg" alt="El Pilar Logo" class="header__logo-img">
+            </a>
+            <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="header__nav" id="mainNav">
+                <a href="#inicio" class="header__nav-link">Inicio</a>
+                <a href="#nosotros" class="header__nav-link">Nosotros</a>
+                <a href="#servicios" class="header__nav-link">Servicios</a>
+                <a href="#galeria" class="header__nav-link">Galería</a>
+                <a href="#horarios" class="header__nav-link">Horarios</a>
+                <a href="#ubicacion" class="header__nav-link">Ubicación</a>
+                <a href="#contacto" class="header__nav-link header__nav-link--cta">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero__overlay"></div>
+            <img src="img/frente-completo.jpeg" alt="Frente de El Pilar" class="hero__bg">
+            <div class="hero__content fade-in">
+                <h1 class="hero__title">Bienvenidos a <span>El Pilar</span></h1>
+                <p class="hero__subtitle">Tu mercería de confianza. Cintas, botones, accesorios y todo lo que necesitás para tus proyectos.</p>
+                <a href="#contacto" class="btn btn--primary">Contactanos</a>
+            </div>
+        </section>
+
+        <section class="about" id="nosotros">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__image fade-in">
+                        <img src="img/interior-negocio.jpeg" alt="Interior de El Pilar">
+                    </div>
+                    <div class="about__text fade-in">
+                        <h2 class="section-title">Sobre Nosotros</h2>
+                        <p>Somos una mercería con años de trayectoria dedicada a brindar la mejor calidad y variedad en botones, hilos, accesorios y todo lo relacionado con el mundo de la costura y .</p>
+                        <p>Nuestro compromiso es ofrecer un atención personalizada, guiándote en cada proyecto para que tus ideas se hagan realidad.</p>
+                        <p>Te esperamos para que conozcas todo lo que tenemos para ofrecerte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicios">
+            <div class="container">
+                <h2 class="section-title section-title--center fade-in">Nuestros Servicios</h2>
+                <div class="services__grid">
+                    <div class="services__card fade-in">
+                        <div class="services__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46 16 2 12 3.46 8 2 3.62 3.46a2 2 0 0 0-1.34 1.89v13.3a2 2 0 0 0 2.66 1.89L8 19l4-1.46L16 19l4.38-1.46a2 2 0 0 0 1.34-1.89V5.35a2 2 0 0 0-1.34-1.89z"/><line x1="12" y1="2" x2="12" y2="17.54"/></svg>
+                        </div>
+                        <h3>Reparación de cierres</h3>
+                        <p>Reparamos el cierre de tu campera, bolso o mochila</p>
+                    </div>
+                    <div class="services__card fade-in">
+                        <div class="services__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Asesoramiento</h3>
+                        <p>Te ayudamos a elegir los materiales adecuados para cada proyecto con atención personalizada.</p>
+                    </div>
+                    <div class="services__card fade-in">
+                        <div class="services__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Accesorios</h3>
+                        <p>Botones, cierres, hilos, elásticos y todos los accesorios que necesitás para terminar tus trabajos.</p>
+                    </div>
+                    <div class="services__card fade-in">
+                        <div class="services__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                        </div>
+                        <h3>Gran Variedad</h3>
+                        <p>Trabajamos con las mejores marcas para ofrecerte productos de calidad a precios accesibles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="galeria">
+            <div class="container">
+                <h2 class="section-title section-title--center fade-in">Nuestro Local</h2>
+                <div class="gallery__grid">
+                    <div class="gallery__item fade-in">
+                        <img src="img/frente-completo.jpeg" alt="Frente completo de El Pilar">
+                    </div>
+                    <div class="gallery__item fade-in">
+                        <img src="img/frente-completo-angulado.jpeg" alt="Frente angulado de El Pilar">
+                    </div>
+                    <div class="gallery__item fade-in">
+                        <img src="img/frente-negocio.jpeg" alt="Frente del negocio">
+                    </div>
+                    <div class="gallery__item fade-in">
+                        <img src="img/frente-angulado.jpeg" alt="Frente angulado">
+                    </div>
+                    <div class="gallery__item fade-in">
+                        <img src="img/interior-negocio.jpeg" alt="Interior del negocio">
+                    </div>
+                    <div class="gallery__item fade-in">
+                        <img src="img/mostrador-negocio.jpeg" alt="Mostrador de El Pilar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hours" id="horarios">
+            <div class="container">
+                <h2 class="section-title section-title--center fade-in">Horarios de Atención</h2>
+                <div class="hours__card fade-in">
+                    <div class="hours__row">
+                        <span class="hours__day">Lunes a Viernes</span>
+                        <span class="hours__time">9:00 - 17:00</span>
+                    </div>
+                    <div class="hours__row">
+                        <span class="hours__day">Sábados</span>
+                        <span class="hours__time">9:00 - 13:00</span>
+                    </div>
+                    <div class="hours__row hours__row--closed">
+                        <span class="hours__day">Domingos</span>
+                        <span class="hours__time">Cerrado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location" id="ubicacion">
+            <div class="container">
+                <h2 class="section-title section-title--center fade-in">Cómo Llegar</h2>
+                <div class="location__wrapper fade-in">
+                    <div class="location__info">
+                        <p class="location__address">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location__icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <strong>Dirección:</strong> <span>Estomba 211</span>
+                        </p>
+                        <p class="location__ref">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location__icon"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <strong>Referencia:</strong> <span>A una cuadra de la Plaza Rivadavia</span>
+                        </p>
+                    </div>
+                    <div class="location__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.058895456307!2d-62.27115822387928!3d-38.716456786166596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbcae7632fea3%3A0x93c2e16cfe7d37e4!2sEstomba%20211%2C%20B8000AAE%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1787170657781!5m2!1ses-419!2sar"
+                            width="100%"
+                            height="350"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contacto">
+            <div class="container">
+                <h2 class="section-title section-title--center fade-in">Contactanos</h2>
+                <div class="contact__grid">
+                    <div class="contact__card fade-in">
+                        <img src="img/whatsapp.png" alt="WhatsApp" class="contact__icon-img">
+                        <h3>WhatsApp</h3>
+                        <p>Escribinos para consultas, pedidos o más información.</p>
+                        <a href="https://wa.me/2915235043" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                            Enviar mensaje
+                        </a>
+                    </div>
+                    <div class="contact__card fade-in">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact__icon">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        <h3>Instagram</h3>
+                        <p>Seguinos para ver novedades, fotos y más.</p>
+                        <a href="https://instagram.com/elpilar_merceria" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                            Seguinos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="img/logo-el-pilar.jpg" alt="El Pilar" class="footer__logo">
+                <span>Mercería</span>
+            </div>
+            <div class="footer__social">
+                <a href="https://wa.me/2915235043" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <img src="img/whatsapp.png" alt="WhatsApp" class="footer__social-icon">
+                </a>
+                <a href="https://instagram.com/elpilar_merceria" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer__social-svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__copy">&copy; 2026 El Pilar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

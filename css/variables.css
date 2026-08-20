@@ -1,0 +1,14 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-blue: #8FBBD5;
+    --color-blue-dark: #1740b1;
+    --color-black: #000000;
+    --color-gray: #555555;
+    --color-gray-light: #F5F5F5;
+
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lato', 'Segoe UI', sans-serif;
+
+    --container-max: 1100px;
+    --header-height: 70px;
+}

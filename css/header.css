@@ -1,0 +1,131 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(184, 216, 232, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.header--scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.header__logo-img {
+    height: 55px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.header__logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.header__nav-link {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-black);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-blue);
+    transition: width 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: var(--color-blue-dark);
+}
+
+.header__nav-link:hover::after {
+    width: 100%;
+}
+
+.header__nav-link--cta {
+    background: var(--color-black);
+    color: var(--color-white) !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.header__nav-link--cta::after {
+    display: none;
+}
+
+.header__nav-link--cta:hover {
+    background: var(--color-blue);
+    color: var(--color-black) !important;
+    transform: translateY(-1px);
+}
+
+.header__menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.header__menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--color-black);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.header__menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
