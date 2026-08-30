@@ -1,4 +1,12 @@
 @media (max-width: 900px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .header__logo-img {
+        height: 72px;
+    }
+
     .header__menu-toggle {
         display: flex;
     }
@@ -46,9 +54,17 @@
 }
 
 @media (max-width: 600px) {
+    :root {
+        --header-height: 64px;
+    }
+
+    .header__logo-img {
+        height: 60px;
+    }
+
     .hero {
         height: auto;
-        padding: 150px 0 80px;
+        padding: 110px 0 80px;
     }
 
     .about {
