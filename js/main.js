@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 
     // Gallery lightbox
-    const galleryItems = document.querySelectorAll('.gallery__item');
+    const galleryItems = document.querySelectorAll('.gallery__item, .products__item');
     const lightbox = document.createElement('div');
     lightbox.classList.add('lightbox');
     lightbox.innerHTML = `

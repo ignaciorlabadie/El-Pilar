@@ -45,10 +45,6 @@
     line-height: 1.2;
 }
 
-.hero__title span {
-    color: var(--color-blue-dark);
-}
-
 .hero__subtitle {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--color-gray);

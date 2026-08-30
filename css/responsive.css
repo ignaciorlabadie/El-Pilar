@@ -46,6 +46,15 @@
 }
 
 @media (max-width: 600px) {
+    .hero {
+        height: auto;
+        padding: 150px 0 80px;
+    }
+
+    .about {
+        padding-top: 60px;
+    }
+
     .services__grid {
         grid-template-columns: 1fr;
     }
@@ -68,5 +77,10 @@
 
     .gallery__item img {
         height: 200px;
+    }
+
+    .products__item {
+        width: 200px;
+        height: 140px;
     }
 }
