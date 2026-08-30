@@ -29,6 +29,9 @@ Landing page de una sola página que presenta el negocio, sus servicios, product
 ```
 .
 ├── index.html              # Página principal (landing page)
+├── netlify.toml            # Config de Netlify (headers de cache, minificación)
+├── robots.txt              # Directivas para buscadores + referencia al sitemap
+├── sitemap.xml             # Sitemap para Google Search Console
 ├── css/                    # Estilos por sección
 │   ├── styles.css          # Punto de entrada (imports)
 │   ├── variables.css       # Variables / tokens de diseño
@@ -55,6 +58,23 @@ npx serve .
 ## Personalización
 
 La información del negocio (dirección, horarios, WhatsApp, Instagram, mapa) está centralizada en `index.html`, en las secciones correspondientes. Los colores y tipografías se gestionan desde `css/variables.css`.
+
+## SEO
+
+El sitio incluye marcas base de SEO on-page:
+
+- **Meta tags** (`title`, `description`, Open Graph, Twitter) en `index.html`.
+- **Datos estructurados JSON-LD** de tipo `Store` con dirección, horarios, teléfono, coordenadas y redes.
+- **`robots.txt`** y **`sitemap.xml`** para Google.
+- **Alt texts descriptivos** en las imágenes.
+
+> **Importante:** la URL canónica del sitio está configurada con el placeholder `https://merceriaelpilar.netlify.app/`. La URL real ya está configurada en el repo; solo actualizala acá si cambiás de dominio:
+>
+> - `index.html` → `link[rel="canonical"]`, `og:url` y el JSON-LD (`url`, `image`, `logo`).
+> - `robots.txt` → directiva `Sitemap`.
+> - `sitemap.xml` → elemento `<loc>`.
+>
+> Idealmente, apuntá un dominio propio (ej. `merceriaelpilar.com.ar`) a Netlify y usá esa URL canónica. Para búsquedas locales en Bahía Blanca, además de este código: creá y verificá el **Google Business Profile**, conectá **Google Search Console**, enviá el `sitemap.xml` y pedí reseñas de clientes. El SEO local tarda en posicionar (semanas/meses), no es automático.
 
 ## Licencia
 
