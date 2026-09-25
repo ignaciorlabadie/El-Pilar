@@ -22,20 +22,34 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Estos assets se sirven con `no-cache` en lugar de un cache largo con
+# `immutable`. La diferencia: `no-cache` permite al navegador guardar el
+# archivo (la pagina sigue cargando al instante) pero le obliga a preguntar
+# en cada visita si sigue siendo el mismo. Si no cambio, el servidor
+# responde "304 Not Modified" con el cuerpo vacio, asi que no se vuelve a
+# descargar el archivo. Si cambio, se descarga la version nueva.
+#
+# `immutable` solo es seguro cuando el nombre del archivo lleva un hash de su
+# contenido (ej. main.a1b2c3.js), porque ahi cambiar el contenido implica
+# cambiar la URL. Este proyecto no tiene build step, asi que /js/main.js siempre
+# apunta al mismo path con contenido distinto, y con `immutable` un despliegue
+# nuevo dejaba a los navegadores usando el archivo viejo durante un ano.
+# Si alguna vez se agrega un build con nombres con hash, se puede volver a
+# `immutable`.
 [[headers]]
   for = "/img/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, no-cache"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, no-cache"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, no-cache"
 
 [[headers]]
   for = "/index.html"
