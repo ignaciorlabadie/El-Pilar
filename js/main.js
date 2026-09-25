@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    document.getElementById('app').innerHTML = Templates.page(SITE_DATA);
+
     const header = document.getElementById('header');
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
