@@ -22,20 +22,27 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Los assets se sirven con must-revalidate y no con cache largo + immutable
+# porque el proyecto no tiene build step: los archivos no llevan hash en el
+# nombre, asi que una URL siempre referencia el mismo path con contenido
+# cambiante. Con immutable, un despliegue nuevo dejaba a los navegadores
+# ejecutando el JS viejo por un ano (la pagina se renderiza desde JS, asi que
+# un main.js desactualizado dejaba la pagina en blanco). Si se agrega un build
+# con nombres con hash, se puede volver a immutable.
 [[headers]]
   for = "/img/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/index.html"
